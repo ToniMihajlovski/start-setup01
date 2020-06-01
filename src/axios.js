@@ -4,6 +4,8 @@ const instance = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com',
 });
 
-instance.defaults.headers.common['Authorization'] = 'AUTH TOKEN FROM INSTANCE';
+const token =  localStorage.getItem('access_token');
+
+instance.defaults.headers.common['Authorization'] = token;
 
 export default instance;

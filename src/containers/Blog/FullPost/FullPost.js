@@ -12,6 +12,7 @@ class FullPost extends Component {
        
     }
     componentDidUpdate(){
+        console.log(this.props);
         this.loadData();
     }
 
